@@ -85,6 +85,29 @@
             ]
           }
         ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "889c86e9-5b29-8f1e-42a6-5f60353e18aa",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "ML Predictions",
+        "dependsOn": [
+          {
+            "activity": "Bronze MandG",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
       }
     ]
   }
