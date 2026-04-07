@@ -17,4 +17,5 @@ ref table gold_daily_prices
 ref table gold_monthly_summary
 ref table gold_ticker_stats
 ref table silver_news
+ref table gold_ml_predictions
 

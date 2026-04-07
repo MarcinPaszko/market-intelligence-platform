@@ -1,0 +1,121 @@
+table gold_ml_predictions
+	lineageTag: a831f889-9c27-4ec7-9c6b-951a44ffb86c
+	sourceLineageTag: [dbo].[gold_ml_predictions]
+
+	column ticker
+		dataType: string
+		lineageTag: fa6afa16-e381-4fd3-9859-fcdcc83eb59d
+		sourceLineageTag: ticker
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column trade_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a5305adf-4798-4372-b4c1-6e6c7b221ae7
+		sourceLineageTag: trade_date
+		summarizeBy: none
+		sourceColumn: trade_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column close
+		dataType: double
+		lineageTag: d1f5202d-00d0-471b-973f-cc78f7867ffe
+		sourceLineageTag: close
+		summarizeBy: sum
+		sourceColumn: close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column daily_return_pct
+		dataType: double
+		lineageTag: 6347f14a-dd96-4cf9-8476-7b32a5a8f53b
+		sourceLineageTag: daily_return_pct
+		summarizeBy: sum
+		sourceColumn: daily_return_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volatility_7d
+		dataType: double
+		lineageTag: b6a37068-2d33-433f-819f-ea85e09db964
+		sourceLineageTag: volatility_7d
+		summarizeBy: sum
+		sourceColumn: volatility_7d
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column label
+		dataType: string
+		lineageTag: fad2895f-8754-4d56-89c9-c95cf31ab0e9
+		sourceLineageTag: label
+		summarizeBy: none
+		sourceColumn: label
+
+		annotation SummarizationSetBy = Automatic
+
+	column predicted_trend
+		dataType: string
+		lineageTag: 14d096ac-1b39-438c-ad86-d6c11c4e0dea
+		sourceLineageTag: predicted_trend
+		summarizeBy: none
+		sourceColumn: predicted_trend
+
+		annotation SummarizationSetBy = Automatic
+
+	column confidence
+		dataType: double
+		lineageTag: da9e86bc-8f1a-4f26-af83-89c573c83d6f
+		sourceLineageTag: confidence
+		summarizeBy: sum
+		sourceColumn: confidence
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column model_version
+		dataType: string
+		lineageTag: daa9f85e-83fa-4709-a59d-68ed9406ee50
+		sourceLineageTag: model_version
+		summarizeBy: none
+		sourceColumn: model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column accuracy
+		dataType: double
+		lineageTag: 3973a80d-467d-41cf-92fe-7019652d6e9f
+		sourceLineageTag: accuracy
+		summarizeBy: sum
+		sourceColumn: accuracy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trained_at
+		dataType: string
+		lineageTag: 7e487268-add4-4d8f-ae15-2393378aed8c
+		sourceLineageTag: trained_at
+		summarizeBy: none
+		sourceColumn: trained_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_ml_predictions = entity
+		mode: directLake
+		source
+			entityName: gold_ml_predictions
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+
