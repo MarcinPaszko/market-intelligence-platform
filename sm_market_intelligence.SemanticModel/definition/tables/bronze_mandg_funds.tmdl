@@ -1,0 +1,100 @@
+table bronze_mandg_funds
+	lineageTag: 45a4e532-d378-48eb-ab4f-92b5c54d526a
+	sourceLineageTag: [dbo].[bronze_mandg_funds]
+
+	column isin
+		dataType: string
+		lineageTag: fceea324-b722-4952-9de8-80c2897e112c
+		sourceLineageTag: isin
+		summarizeBy: none
+		sourceColumn: isin
+
+		annotation SummarizationSetBy = Automatic
+
+	column fund_name
+		dataType: string
+		lineageTag: c720424b-f651-4bda-a973-8fec95c52304
+		sourceLineageTag: fund_name
+		summarizeBy: none
+		sourceColumn: fund_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency
+		dataType: string
+		lineageTag: c8f6b0f1-bf4a-48f8-8df9-76b6339ad0a1
+		sourceLineageTag: currency
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_class
+		dataType: string
+		lineageTag: 992ae7b0-d2c3-4212-8833-8c72b590ff99
+		sourceLineageTag: asset_class
+		summarizeBy: none
+		sourceColumn: asset_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column nav_price
+		dataType: double
+		lineageTag: f87c85e7-14b0-4694-b280-a032bdf54024
+		sourceLineageTag: nav_price
+		summarizeBy: sum
+		sourceColumn: nav_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column price_change_pct
+		dataType: double
+		lineageTag: f4f4330a-bfef-4c7b-a29c-4f908c342c6a
+		sourceLineageTag: price_change_pct
+		summarizeBy: sum
+		sourceColumn: price_change_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yield_pct
+		dataType: double
+		lineageTag: fed915ff-09b5-4d00-b108-6c6d097c23ce
+		sourceLineageTag: yield_pct
+		summarizeBy: sum
+		sourceColumn: yield_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column scraped_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c58d7f5-142c-4ba3-8617-704e1dd50063
+		sourceLineageTag: scraped_date
+		summarizeBy: none
+		sourceColumn: scraped_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingested_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 61863074-a61c-44e5-a417-6351244fddca
+		sourceLineageTag: ingested_at
+		summarizeBy: none
+		sourceColumn: ingested_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bronze_mandg_funds = entity
+		mode: directLake
+		source
+			entityName: bronze_mandg_funds
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+

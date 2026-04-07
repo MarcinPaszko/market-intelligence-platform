@@ -1,0 +1,98 @@
+table silver_news
+	lineageTag: eb95879c-4f55-47ed-940f-6cf07f3913f8
+	sourceLineageTag: [dbo].[silver_news]
+
+	column ticker
+		dataType: string
+		lineageTag: 89bc97a9-b12d-4ee7-a514-75d4e020c404
+		sourceLineageTag: ticker
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column company
+		dataType: string
+		lineageTag: 772d267e-75af-4746-886b-48c917877c8a
+		sourceLineageTag: company
+		summarizeBy: none
+		sourceColumn: company
+
+		annotation SummarizationSetBy = Automatic
+
+	column published_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e7dda9ad-17be-4a6f-b4ff-2c86d8436a9b
+		sourceLineageTag: published_at
+		summarizeBy: none
+		sourceColumn: published_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 3205e5f3-dc91-4f27-a869-11d6767733f4
+		sourceLineageTag: title
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentiment_polarity
+		dataType: double
+		lineageTag: 67fb412f-8bca-4115-8528-3df766ccbbe9
+		sourceLineageTag: sentiment_polarity
+		summarizeBy: none
+		sourceColumn: sentiment_polarity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sentiment_subjectivity
+		dataType: double
+		lineageTag: 4592301d-0da5-4efa-9849-2b4e92a5c87f
+		sourceLineageTag: sentiment_subjectivity
+		summarizeBy: none
+		sourceColumn: sentiment_subjectivity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sentiment_label
+		dataType: string
+		lineageTag: 7c6df019-a740-41bc-8c42-2be01f4727f3
+		sourceLineageTag: sentiment_label
+		summarizeBy: none
+		sourceColumn: sentiment_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		lineageTag: 3d377ebc-7eea-4104-ba9b-a883ae385bfe
+		sourceLineageTag: source
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingested_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a32398bf-244c-4184-a564-92631e8a216e
+		sourceLineageTag: ingested_at
+		summarizeBy: none
+		sourceColumn: ingested_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition silver_news = entity
+		mode: directLake
+		source
+			entityName: silver_news
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+

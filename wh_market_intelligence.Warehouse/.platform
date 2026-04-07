@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "wh_market_intelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "efaf8007-9ff8-a223-4f58-778901035600"
+  }
+}

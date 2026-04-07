@@ -1,0 +1,107 @@
+table gold_ticker_stats
+	lineageTag: 2db544bd-e4d1-480b-a1d4-08f0f9e1affe
+	sourceLineageTag: [dbo].[gold_ticker_stats]
+
+	column ticker
+		dataType: string
+		lineageTag: bb83542a-1ce5-43b0-8b9d-6b4e89834e8d
+		sourceLineageTag: ticker
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_return_pct
+		dataType: double
+		lineageTag: 45d7696a-8097-4d90-967f-fa9337186f6c
+		sourceLineageTag: total_return_pct
+		summarizeBy: none
+		sourceColumn: total_return_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_daily_return
+		dataType: double
+		lineageTag: d9ad6e2f-6d51-4833-acd1-5d03f7d29c4a
+		sourceLineageTag: avg_daily_return
+		summarizeBy: none
+		sourceColumn: avg_daily_return
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_volatility
+		dataType: double
+		lineageTag: 92e7b408-0801-43d2-8aef-b038129475ef
+		sourceLineageTag: max_volatility
+		summarizeBy: none
+		sourceColumn: max_volatility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_volatility
+		dataType: double
+		lineageTag: 961e6ad1-e180-4c63-a9b5-8958b826bf93
+		sourceLineageTag: avg_volatility
+		summarizeBy: none
+		sourceColumn: avg_volatility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sharpe_ratio
+		dataType: double
+		lineageTag: 982c8e7b-4374-4c39-a59b-04f5cc29ade1
+		sourceLineageTag: sharpe_ratio
+		summarizeBy: none
+		sourceColumn: sharpe_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column best_day_return
+		dataType: double
+		lineageTag: 624fc137-deb8-4f6a-8aee-32da0bef7f7f
+		sourceLineageTag: best_day_return
+		summarizeBy: none
+		sourceColumn: best_day_return
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column worst_day_return
+		dataType: double
+		lineageTag: 844d3f84-f733-4e07-9ec8-6cc673ebda45
+		sourceLineageTag: worst_day_return
+		summarizeBy: none
+		sourceColumn: worst_day_return
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column loaded_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 36832876-3993-4ed4-975c-b7b649e1fdc6
+		sourceLineageTag: loaded_at
+		summarizeBy: none
+		sourceColumn: loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_ticker_stats = entity
+		mode: directLake
+		source
+			entityName: gold_ticker_stats
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+

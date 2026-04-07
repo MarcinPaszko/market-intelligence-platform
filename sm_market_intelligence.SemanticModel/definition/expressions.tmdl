@@ -1,0 +1,11 @@
+expression 'DirectLake - lh_market_intelligence' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/4c8e2bff-9177-4eed-bc17-9f87e0dd8f2f/d0d79186-79f8-4c5d-9beb-27d1c9f02868", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: a418ad57-86a5-4405-a7d1-01ae4a17224f
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_prices]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[silver_prices]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_news]"}},"objectType":"Table"}]
+

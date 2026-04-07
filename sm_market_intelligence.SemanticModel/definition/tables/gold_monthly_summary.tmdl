@@ -1,0 +1,135 @@
+table gold_monthly_summary
+	lineageTag: fafbf0d9-41a4-4286-8cf7-5dd1a226f785
+	sourceLineageTag: [dbo].[gold_monthly_summary]
+
+	column ticker
+		dataType: string
+		lineageTag: 1a6ad2b5-a231-4342-acc0-40af2c9692d5
+		sourceLineageTag: ticker
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 46e63809-2eba-4063-b4c5-c8bc24a0c4ad
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 2076a3e0-9a8a-4e70-a2c2-d32974168507
+		sourceLineageTag: month
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_close
+		dataType: double
+		lineageTag: 98ccde2e-06ed-4a8c-96d9-2e1134b80732
+		sourceLineageTag: avg_close
+		summarizeBy: none
+		sourceColumn: avg_close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column min_close
+		dataType: double
+		lineageTag: e024f4d4-b1c6-4418-ad59-65a2bbdcc027
+		sourceLineageTag: min_close
+		summarizeBy: none
+		sourceColumn: min_close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_close
+		dataType: double
+		lineageTag: 22333b48-0d51-4467-b0e7-5b1777607509
+		sourceLineageTag: max_close
+		summarizeBy: none
+		sourceColumn: max_close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_volume
+		dataType: int64
+		formatString: 0
+		lineageTag: 747dfe16-adf5-4dd9-930b-20c1d184ea95
+		sourceLineageTag: total_volume
+		summarizeBy: none
+		sourceColumn: total_volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_daily_return
+		dataType: double
+		lineageTag: ee3d7379-3cd5-4afc-b7ff-3684ecd78c90
+		sourceLineageTag: avg_daily_return
+		summarizeBy: none
+		sourceColumn: avg_daily_return
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_volatility
+		dataType: double
+		lineageTag: 22841c7c-5cfe-4171-a21b-58a3f3e79ca6
+		sourceLineageTag: avg_volatility
+		summarizeBy: none
+		sourceColumn: avg_volatility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column positive_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 942f725f-21a2-4fab-a82e-1d8160c44435
+		sourceLineageTag: positive_days
+		summarizeBy: none
+		sourceColumn: positive_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column negative_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 49ab399f-6260-4c9f-968e-81362085e75e
+		sourceLineageTag: negative_days
+		summarizeBy: none
+		sourceColumn: negative_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column loaded_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 27937a3f-2c0b-4c2f-825a-0183d0368a4f
+		sourceLineageTag: loaded_at
+		summarizeBy: none
+		sourceColumn: loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_monthly_summary = entity
+		mode: directLake
+		source
+			entityName: gold_monthly_summary
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+

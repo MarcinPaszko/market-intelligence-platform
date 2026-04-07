@@ -1,0 +1,138 @@
+table gold_daily_prices
+	lineageTag: f2f17c43-8473-4a72-b240-52edc12c0b4a
+	sourceLineageTag: [dbo].[gold_daily_prices]
+
+	column ticker
+		dataType: string
+		lineageTag: c5f9523d-ec7e-41ec-9525-ca83032dc0aa
+		sourceLineageTag: ticker
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column trade_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cfa305be-a4dc-4529-85b6-d41cdc62607a
+		sourceLineageTag: trade_date
+		summarizeBy: none
+		sourceColumn: trade_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column open_price
+		dataType: double
+		lineageTag: fa4a1ee9-267c-40fd-921f-4d0ed17e0151
+		sourceLineageTag: open_price
+		summarizeBy: sum
+		sourceColumn: open_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_price
+		dataType: double
+		lineageTag: 70f2c04a-e0b2-469a-b7e2-e6ad6dda4d03
+		sourceLineageTag: high_price
+		summarizeBy: sum
+		sourceColumn: high_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column low_price
+		dataType: double
+		lineageTag: 7195d2ae-1815-4de1-ae4a-3f5b1c8aa20e
+		sourceLineageTag: low_price
+		summarizeBy: sum
+		sourceColumn: low_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column close_price
+		dataType: double
+		lineageTag: 01128628-24c2-4adc-a2c0-c3320ac805d4
+		sourceLineageTag: close_price
+		summarizeBy: sum
+		sourceColumn: close_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volume
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f5fe558-9618-4341-af94-486e117a0b5e
+		sourceLineageTag: volume
+		summarizeBy: sum
+		sourceColumn: volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column daily_return_pct
+		dataType: double
+		lineageTag: df770063-6ada-4766-adf1-469720f0daed
+		sourceLineageTag: daily_return_pct
+		summarizeBy: sum
+		sourceColumn: daily_return_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volatility_7d
+		dataType: double
+		lineageTag: 4003f75d-b22a-42db-a493-07b874f0e5f3
+		sourceLineageTag: volatility_7d
+		summarizeBy: sum
+		sourceColumn: volatility_7d
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volume_change_pct
+		dataType: double
+		lineageTag: 3fe41d83-9d76-44df-8dbc-2f3ee65c229d
+		sourceLineageTag: volume_change_pct
+		summarizeBy: sum
+		sourceColumn: volume_change_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column price_range_pct
+		dataType: double
+		lineageTag: aa9b8f03-70df-4ea8-9779-e5c8bcad3080
+		sourceLineageTag: price_range_pct
+		summarizeBy: sum
+		sourceColumn: price_range_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column loaded_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 56f0ef0a-e98a-4e6b-872f-342457404089
+		sourceLineageTag: loaded_at
+		summarizeBy: none
+		sourceColumn: loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_daily_prices = entity
+		mode: directLake
+		source
+			entityName: gold_daily_prices
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_market_intelligence'
+

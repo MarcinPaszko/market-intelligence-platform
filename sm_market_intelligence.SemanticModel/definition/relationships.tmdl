@@ -1,0 +1,12 @@
+relationship d112f251-5f77-a4e6-cfc7-88c976a7754c
+	fromColumn: gold_daily_prices.ticker
+	toColumn: gold_ticker_stats.ticker
+
+relationship e7d9b4b7-cf7d-e6fe-290b-e9f841f4bf7e
+	fromColumn: gold_daily_prices.ticker
+	toColumn: gold_monthly_summary.ticker
+
+relationship 7e542bc0-64f5-c008-4d32-1323310b107e
+	fromColumn: gold_daily_prices.ticker
+	toColumn: silver_news.ticker
+
