@@ -1,0 +1,6 @@
+dependencies:
+- pip:
+  - yfinance
+  - requests
+  - textblob
+  - scikit-learn

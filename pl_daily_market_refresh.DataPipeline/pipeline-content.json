@@ -33,7 +33,7 @@
         "name": "Silver Transform",
         "dependsOn": [
           {
-            "activity": "Bronze Yahoo Finance",
+            "activity": "Wait1",
             "dependencyConditions": [
               "Completed"
             ]
@@ -56,7 +56,7 @@
         "name": "Bronze News",
         "dependsOn": [
           {
-            "activity": "Silver Transform",
+            "activity": "Wait2",
             "dependencyConditions": [
               "Completed"
             ]
@@ -79,7 +79,7 @@
         "name": "Bronze MandG",
         "dependsOn": [
           {
-            "activity": "Bronze News",
+            "activity": "Wait3",
             "dependencyConditions": [
               "Completed"
             ]
@@ -100,6 +100,66 @@
           "secureOutput": false
         },
         "name": "ML Predictions",
+        "dependsOn": [
+          {
+            "activity": "Wait4",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Wait",
+        "typeProperties": {
+          "waitTimeInSeconds": 120
+        },
+        "name": "Wait1",
+        "dependsOn": [
+          {
+            "activity": "Bronze Yahoo Finance",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Wait",
+        "typeProperties": {
+          "waitTimeInSeconds": 120
+        },
+        "name": "Wait2",
+        "dependsOn": [
+          {
+            "activity": "Silver Transform",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Wait",
+        "typeProperties": {
+          "waitTimeInSeconds": 120
+        },
+        "name": "Wait3",
+        "dependsOn": [
+          {
+            "activity": "Bronze News",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Wait",
+        "typeProperties": {
+          "waitTimeInSeconds": 120
+        },
+        "name": "Wait4",
         "dependsOn": [
           {
             "activity": "Bronze MandG",

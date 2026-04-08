@@ -16,19 +16,12 @@
 # META           "id": "d0d79186-79f8-4c5d-9beb-27d1c9f02868"
 # META         }
 # META       ]
+# META     },
+# META     "environment": {
+# META       "environmentId": "c03cf241-b117-9966-4ce6-3cbb2edbd51c",
+# META       "workspaceId": "00000000-0000-0000-0000-000000000000"
 # META     }
 # META   }
-# META }
-
-# CELL ********************
-
-%pip install scikit-learn mlflow
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
 # META }
 
 # CELL ********************
