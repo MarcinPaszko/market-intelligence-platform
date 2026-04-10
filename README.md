@@ -24,7 +24,7 @@ M&G Investments API    ──► Lakehouse Gold (aggregated)   ──►  Power 
 ##Diagram
 
 
-![Architecture](diagram.png)
+![Diagram](Diagram.png)
 
 ### Medallion Architecture
 
