@@ -21,7 +21,7 @@ M&G Investments API    ──► Lakehouse Gold (aggregated)   ──►  Power 
                             Pipeline (daily 18:00 CET)         Shareable link
                             └── nb_01 → nb_02 → nb_03 → nb_04  Mobile ready
 ```
-##Diagram
+## Diagram
 
 
 ![Diagram](Diagram.png)
