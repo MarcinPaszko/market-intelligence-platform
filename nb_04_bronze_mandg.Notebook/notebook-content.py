@@ -53,7 +53,7 @@ def fetch_mandg_funds(start=0, limit=15):
     response = requests.post(URL, json=payload, headers=HEADERS)
     return response.json()
 
-# Test
+
 first_batch = fetch_mandg_funds(start=0, limit=15)
 total = first_batch.get("total", 0)
 print(f"Total funds: {total}")
@@ -68,7 +68,7 @@ print(f"First batch: {len(first_batch.get('values', []))} funds")
 
 # CELL ********************
 
-# Pobierz wszystkie fundusze przez paginację
+
 all_funds = []
 start = 0
 limit = 15
@@ -83,7 +83,7 @@ while start < total:
         props = fund.get("properties_pub", {})
         stats = fund.get("statistics", [])
         
-        # Wyciągnij ceny z statistics
+        
         nav_price = None
         price_change_pct = None
         yield_val = None
@@ -132,7 +132,7 @@ display(df_mandg.head(10))
 
 from pyspark.sql import functions as F
 
-# Konwersja do Spark i zapis Bronze
+
 spark_df_mandg = spark.createDataFrame(df_mandg)
 
 spark_df_mandg = spark_df_mandg \

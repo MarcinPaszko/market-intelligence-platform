@@ -104,7 +104,7 @@ display(df_news.head())
 
 from pyspark.sql import functions as F
 
-# Konwersja do Spark i zapis Bronze
+
 spark_df_news = spark.createDataFrame(df_news)
 
 spark_df_news = spark_df_news \
@@ -134,10 +134,10 @@ from pyspark.sql import functions as F
 from pyspark.sql.types import FloatType
 import pandas as pd
 
-# Czytamy Bronze news
+
 df_news_bronze = spark.table("bronze_news").toPandas()
 
-# Sentiment scoring przez TextBlob
+
 def get_polarity(text):
     try:
         return float(TextBlob(str(text)).sentiment.polarity)
@@ -150,7 +150,7 @@ def get_subjectivity(text):
     except:
         return 0.0
 
-# Aplikuj na title + description razem
+
 df_news_bronze["text_combined"] = (
     df_news_bronze["title"].fillna("") + " " + 
     df_news_bronze["description"].fillna("")
@@ -159,7 +159,7 @@ df_news_bronze["text_combined"] = (
 df_news_bronze["sentiment_polarity"]    = df_news_bronze["text_combined"].apply(get_polarity)
 df_news_bronze["sentiment_subjectivity"] = df_news_bronze["text_combined"].apply(get_subjectivity)
 
-# Kategoryzacja
+
 def categorize(score):
     if score > 0.1:
         return "positive"
@@ -182,7 +182,7 @@ print(df_news_bronze[["ticker", "title", "sentiment_polarity", "sentiment_label"
 
 # CELL ********************
 
-# Zapis Silver news
+
 df_silver_news = spark.createDataFrame(df_news_bronze[[
     "ticker", "company", "published_at", "title",
     "sentiment_polarity", "sentiment_subjectivity", 

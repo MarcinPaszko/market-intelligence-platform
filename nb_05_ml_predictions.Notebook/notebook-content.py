@@ -53,18 +53,18 @@ print(df[["ticker", "trade_date", "close", "daily_return_pct", "volatility_7d"]]
 
 # CELL ********************
 
-# Tworzenie features i labela
+
 def create_features(df):
     result = []
     
     for ticker in df['ticker'].unique():
         df_t = df[df['ticker'] == ticker].copy().reset_index(drop=True)
         
-        # Label Y – zwrot za 3 dni w przód
+       
         df_t['future_return'] = df_t['close'].shift(-3) / df_t['close'] - 1
         df_t['future_return_pct'] = df_t['future_return'] * 100
         
-        # Kategoryzacja
+        
         def categorize(x):
             if pd.isna(x):
                 return None
@@ -83,7 +83,7 @@ def create_features(df):
 
 df_featured = create_features(df)
 
-# Usuń nulle
+
 df_ml = df_featured.dropna(subset=[
     'daily_return_pct', 'volatility_7d', 
     'volume_change_pct', 'price_range_pct', 'label'
@@ -101,14 +101,14 @@ print(f"Label distribution:\n{df_ml['label'].value_counts()}")
 
 # CELL ********************
 
-# Features i label
+
 FEATURES = ['daily_return_pct', 'volatility_7d', 
             'volume_change_pct', 'price_range_pct']
 
 X = df_ml[FEATURES]
 y = df_ml['label']
 
-# Split 80/20 – shuffle=False zachowuje chronologię
+
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, shuffle=False
 )
@@ -116,7 +116,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(f"✓ Train: {len(X_train)} rows")
 print(f"✓ Test:  {len(X_test)} rows")
 
-# Trening bez MLflow
+
 model = RandomForestClassifier(
     n_estimators=100,
     max_depth=10,
@@ -125,7 +125,7 @@ model = RandomForestClassifier(
 )
 model.fit(X_train, y_train)
 
-# Ewaluacja
+
 y_pred = model.predict(X_test)
 y_prob = model.predict_proba(X_test)
 accuracy = accuracy_score(y_test, y_pred)
@@ -145,13 +145,13 @@ print(classification_report(y_test, y_pred))
 
 from datetime import datetime
 
-# Predykcje na CAŁYM datasecie
+
 X_all = df_ml[FEATURES]
 df_ml = df_ml.copy()
 df_ml['predicted_trend'] = model.predict(X_all)
 df_ml['confidence'] = model.predict_proba(X_all).max(axis=1).round(4)
 
-# Feature importance
+
 fi = pd.DataFrame({
     'feature': FEATURES,
     'importance': model.feature_importances_.round(4)
@@ -160,7 +160,7 @@ fi = pd.DataFrame({
 print("Feature importance:")
 print(fi)
 
-# Zapisz do Gold
+
 df_predictions = df_ml[[
     'ticker', 'trade_date', 'close',
     'daily_return_pct', 'volatility_7d',

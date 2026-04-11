@@ -44,7 +44,13 @@
         "type": "TridentNotebook",
         "typeProperties": {
           "notebookId": "4044d348-5713-a705-4808-aca40736506d",
-          "workspaceId": "00000000-0000-0000-0000-000000000000"
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "API_KEY": {
+              "value": "12e51dd1b0f840119d7b2b29bf4375af",
+              "type": "string"
+            }
+          }
         },
         "policy": {
           "timeout": "0.12:00:00",
