@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"type\":2,\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":3,\"modelExtensions\":[{\"name\":\"extension\",\"entities\":[{\"name\":\"bronze_mandg_funds\",\"extends\":\"bronze_mandg_funds\",\"measures\":[{\"name\":\"Avg Close Price\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[close_price])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"$#,##0.00\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Total Volume\",\"dataType\":4,\"expression\":\"\\n    SUM(gold_daily_prices[volume])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"#,##0\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Daily Return %\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[daily_return_pct])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.00%\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Volatility\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[volatility_7d])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.00\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Sentiment\",\"dataType\":3,\"expression\":\"\\n    AVERAGE(silver_news[sentiment_polarity])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Positive News %\",\"dataType\":3,\"expression\":\"\\nDIVIDE(\\n    CALCULATE(COUNTROWS(silver_news), \\n               silver_news[sentiment_label] = \\\"positive\\\"),\\n    COUNTROWS(silver_news),\\n    0\\n)\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}}]},{\"name\":\"gold_ml_predictions\",\"extends\":\"gold_ml_predictions\",\"measures\":[{\"name\":\"Total Predictions\",\"dataType\":3,\"expression\":\"COUNTROWS(gold_ml_predictions)\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Model Accuracy\",\"dataType\":3,\"expression\":\"0.3652\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Trade Date Clean\",\"dataType\":3,\"expression\":\"FORMAT(MAX(gold_ml_predictions[trade_date]), \\\"YYYY-MM-DD\\\")\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}}]}]}],\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"},\"type\":2},\"customTheme\":{\"name\":\"Innovate\",\"version\":{\"visual\":\"2.7.0\",\"report\":\"3.2.0\",\"page\":\"2.3.1\"},\"type\":2}},\"activeSectionIndex\":3,\"modelExtensions\":[{\"name\":\"extension\",\"entities\":[{\"name\":\"bronze_mandg_funds\",\"extends\":\"bronze_mandg_funds\",\"measures\":[{\"name\":\"Avg Close Price\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[close_price])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"$#,##0.00\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Total Volume\",\"dataType\":4,\"expression\":\"\\n    SUM(gold_daily_prices[volume])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"#,##0\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Daily Return %\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[daily_return_pct])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.00%\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Volatility\",\"dataType\":4,\"expression\":\"\\n    AVERAGE(gold_daily_prices[volatility_7d])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.00\",\"format\":\"Custom\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Avg Sentiment\",\"dataType\":3,\"expression\":\"\\n    AVERAGE(silver_news[sentiment_polarity])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.0000\",\"format\":\"NumberDecimal\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null,\"accuracy\":4}},{\"name\":\"Positive News %\",\"dataType\":3,\"expression\":\"\\nDIVIDE(\\n    CALCULATE(COUNTROWS(silver_news), \\n               silver_news[sentiment_label] = \\\"positive\\\"),\\n    COUNTROWS(silver_news),\\n    0\\n)\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.0000\",\"format\":\"NumberDecimal\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null,\"accuracy\":4}},{\"name\":\"Sentiment Label\",\"dataType\":3,\"expression\":\"\\nIF([Avg Sentiment] > 0.2, \\\"Bullish\\\",\\nIF([Avg Sentiment] > 0.05, \\\"Cautiously Positive\\\",\\nIF([Avg Sentiment] < -0.1, \\\"Bearish\\\", \\\"Neutral\\\")))\",\"errorMessage\":null,\"hidden\":false,\"references\":{\"unrecognizedReferences\":false,\"measures\":[{\"schema\":\"extension\",\"entity\":\"bronze_mandg_funds\",\"name\":\"Avg Sentiment\"}]},\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}}]},{\"name\":\"gold_ml_predictions\",\"extends\":\"gold_ml_predictions\",\"measures\":[{\"name\":\"Total Predictions\",\"dataType\":3,\"expression\":\"COUNTROWS(gold_ml_predictions)\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Model Accuracy\",\"dataType\":3,\"expression\":\"0.3652\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Trade Date Clean\",\"dataType\":3,\"expression\":\"FORMAT(MAX(gold_ml_predictions[trade_date]), \\\"YYYY-MM-DD\\\")\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}},{\"name\":\"Prediction Accuracy\",\"dataType\":3,\"expression\":\"\\nDIVIDE(\\n    CALCULATE(COUNTROWS(gold_ml_predictions),\\n        gold_ml_predictions[predicted_trend] = gold_ml_predictions[label]),\\n    COUNTROWS(gold_ml_predictions),\\n    0\\n)\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"G\",\"format\":\"General\",\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}}]}]}],\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -10,6 +10,11 @@
             "name": "CY26SU02",
             "path": "BaseThemes/CY26SU02.json",
             "type": 202
+          },
+          {
+            "name": "Innovate",
+            "path": "BuiltInThemes/Innovate.json",
+            "type": 201
           }
         ],
         "name": "SharedResources",
@@ -28,40 +33,67 @@
       "ordinal": 3,
       "visualContainers": [
         {
-          "config": "{\"name\":\"537f73befafc4a536ad5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":848.1766438624081,\"y\":16.348817345073403,\"z\":3,\"width\":431.6087779099378,\"height\":703.6530985319592,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_ml_predictions.ticker\"},{\"queryRef\":\"gold_ml_predictions.Trade Date Clean\"},{\"queryRef\":\"gold_ml_predictions.predicted_trend\"},{\"queryRef\":\"Sum(gold_ml_predictions.confidence)\"},{\"queryRef\":\"gold_ml_predictions.label\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_ml_predictions.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"predicted_trend\"},\"Name\":\"gold_ml_predictions.predicted_trend\",\"NativeReferenceName\":\"Trend\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"confidence\"},\"Name\":\"Sum(gold_ml_predictions.confidence)\",\"NativeReferenceName\":\"Confidence\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"label\"},\"Name\":\"gold_ml_predictions.label\",\"NativeReferenceName\":\"Label\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Trade Date Clean\"},\"Name\":\"gold_ml_predictions.Trade Date Clean\",\"NativeReferenceName\":\"Trade Date Clean\"}]},\"columnProperties\":{\"gold_ml_predictions.ticker\":{\"displayName\":\"Ticker\"},\"gold_ml_predictions.predicted_trend\":{\"displayName\":\"Trend\"},\"Sum(gold_ml_predictions.confidence)\":{\"displayName\":\"Confidence\"},\"gold_ml_predictions.label\":{\"displayName\":\"Label\"}},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"182c664c5cc91f4f3f18\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":135,\"z\":5000,\"width\":221.875,\"height\":298.125,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"gold_ml_predictions.ticker\",\"active\":true}],\"Values\":[{\"queryRef\":\"gold_ml_predictions.Prediction Accuracy\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_ml_predictions.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Prediction Accuracy\"},\"Name\":\"gold_ml_predictions.Prediction Accuracy\",\"NativeReferenceName\":\"Prediction Accuracy\"}]},\"columnProperties\":{\"gold_ml_predictions.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 703.65,
-          "width": 431.61,
-          "x": 848.18,
-          "y": 16.35,
-          "z": 3.00
+          "height": 298.13,
+          "width": 221.88,
+          "x": 0.00,
+          "y": 135.00,
+          "z": 5000.00
         },
         {
-          "config": "{\"name\":\"63fcf1facd63a609bb09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":0,\"z\":0,\"width\":191.6081392842603,\"height\":181.1448961834133,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"gold_ml_predictions.Total Predictions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Total Predictions\"},\"Name\":\"gold_ml_predictions.Total Predictions\",\"NativeReferenceName\":\"Total Predictions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Total Predictions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"537f73befafc4a536ad5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":848.125,\"y\":135,\"z\":3000,\"width\":431.875,\"height\":560.625,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_ml_predictions.ticker\"},{\"queryRef\":\"gold_ml_predictions.Trade Date Clean\"},{\"queryRef\":\"gold_ml_predictions.predicted_trend\"},{\"queryRef\":\"Sum(gold_ml_predictions.confidence)\"},{\"queryRef\":\"gold_ml_predictions.label\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_ml_predictions.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"predicted_trend\"},\"Name\":\"gold_ml_predictions.predicted_trend\",\"NativeReferenceName\":\"Trend\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"confidence\"},\"Name\":\"Sum(gold_ml_predictions.confidence)\",\"NativeReferenceName\":\"Confidence\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"label\"},\"Name\":\"gold_ml_predictions.label\",\"NativeReferenceName\":\"Label\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Trade Date Clean\"},\"Name\":\"gold_ml_predictions.Trade Date Clean\",\"NativeReferenceName\":\"Trade Date Clean\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"predicted_trend\"}}}]},\"columnProperties\":{\"gold_ml_predictions.ticker\":{\"displayName\":\"Ticker\"},\"gold_ml_predictions.predicted_trend\":{\"displayName\":\"Trend\"},\"Sum(gold_ml_predictions.confidence)\":{\"displayName\":\"Confidence\"},\"gold_ml_predictions.label\":{\"displayName\":\"Label\"}},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 181.14,
-          "width": 191.61,
-          "x": 9.81,
-          "y": 0.00,
+          "height": 560.63,
+          "width": 431.88,
+          "x": 848.13,
+          "y": 135.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"63fcf1facd63a609bb09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":48.125,\"z\":0,\"width\":188.125,\"height\":103.125,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"gold_ml_predictions.Total Predictions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Total Predictions\"},\"Name\":\"gold_ml_predictions.Total Predictions\",\"NativeReferenceName\":\"Total Predictions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Total Predictions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 103.13,
+          "width": 188.13,
+          "x": 0.00,
+          "y": 48.13,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"9e56dd4b3439131c85d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":201.4174296913043,\"y\":7.1934796318322975,\"z\":1,\"width\":208.6109093231366,\"height\":173.951416551581,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"gold_ml_predictions.Model Accuracy\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Model Accuracy\"},\"Name\":\"gold_ml_predictions.Model Accuracy\",\"NativeReferenceName\":\"Model Accuracy\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Model Accuracy\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"8315cdc47364ce663926\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1279.785750153434,\"height\":48.318441587425575,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"ML Predictions \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Georgia\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 173.95,
-          "width": 208.61,
-          "x": 201.42,
-          "y": 7.19,
-          "z": 1.00
+          "height": 48.32,
+          "width": 1279.79,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
         },
         {
-          "config": "{\"name\":\"edc2c8785fe28c56067b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":171.9895584701722,\"z\":2,\"width\":735.6967805283031,\"height\":548.0123574068605,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_ml_predictions.predicted_trend\",\"active\":true}],\"Y\":[{\"queryRef\":\"gold_ml_predictions.Total Predictions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"predicted_trend\"},\"Name\":\"gold_ml_predictions.predicted_trend\",\"NativeReferenceName\":\"Trend\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Total Predictions\"},\"Name\":\"gold_ml_predictions.Total Predictions\",\"NativeReferenceName\":\"Total Predictions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Total Predictions\"}}}]},\"columnProperties\":{\"gold_ml_predictions.predicted_trend\":{\"displayName\":\"Trend\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"8a78ae06b3e83aa7c371\",\"layouts\":[{\"id\":0,\"position\":{\"x\":377.5,\"y\":48.125,\"z\":6000,\"width\":660,\"height\":91.25,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_ml_predictions.ticker\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_ml_predictions.ticker\",\"NativeReferenceName\":\"Ticker\"}]},\"columnProperties\":{\"gold_ml_predictions.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 548.01,
-          "width": 735.70,
-          "x": 9.81,
-          "y": 171.99,
-          "z": 2.00
+          "height": 91.25,
+          "width": 660.00,
+          "x": 377.50,
+          "y": 48.13,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"9e56dd4b3439131c85d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":188.125,\"y\":48.125,\"z\":1000,\"width\":206.875,\"height\":103.125,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"gold_ml_predictions.Model Accuracy\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Model Accuracy\"},\"Name\":\"gold_ml_predictions.Model Accuracy\",\"NativeReferenceName\":\"Model Accuracy\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Model Accuracy\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 103.13,
+          "width": 206.88,
+          "x": 188.13,
+          "y": 48.13,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"edc2c8785fe28c56067b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":221.875,\"y\":139.375,\"z\":2000,\"width\":593.75,\"height\":518.125,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_ml_predictions.predicted_trend\",\"active\":true}],\"Y\":[{\"queryRef\":\"gold_ml_predictions.Total Predictions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_ml_predictions\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_ml_predictions\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"predicted_trend\"},\"Name\":\"gold_ml_predictions.predicted_trend\",\"NativeReferenceName\":\"Trend\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Total Predictions\"},\"Name\":\"gold_ml_predictions.Total Predictions\",\"NativeReferenceName\":\"Total Predictions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"Total Predictions\"}}}]},\"columnProperties\":{\"gold_ml_predictions.predicted_trend\":{\"displayName\":\"Trend\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Predicted Market Direction'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 518.13,
+          "width": 593.75,
+          "x": 221.88,
+          "y": 139.38,
+          "z": 2000.00
         }
       ],
       "width": 1280.00
@@ -76,40 +108,67 @@
       "ordinal": 1,
       "visualContainers": [
         {
-          "config": "{\"name\":\"2da109bb2f6fdc4e4179\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":228.2294901372247,\"z\":2000,\"width\":504.85147961586665,\"height\":486.54080418938446,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"silver_news.ticker\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Sentiment\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_news\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ticker\"},\"Name\":\"silver_news.ticker\",\"NativeReferenceName\":\"ticker\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"},\"Name\":\"bronze_mandg_funds.Avg Sentiment\",\"NativeReferenceName\":\"Avg Sentiment\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#0DEF0A'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#D90000'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]}}}",
+          "config": "{\"name\":\"06faa9b48f79c696dcb5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":157.6025992065076,\"z\":4000,\"width\":423.1073928904997,\"height\":107.24824178368152,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Sentiment Label\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Sentiment Label\"},\"Name\":\"bronze_mandg_funds.Sentiment Label\",\"NativeReferenceName\":\"Sentiment Label\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Sentiment Label\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 486.54,
+          "height": 107.25,
+          "width": 423.11,
+          "x": 0.00,
+          "y": 157.60,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"16a4c3fb9075155b95e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":513.75,\"y\":48.125,\"z\":6000,\"width\":765.625,\"height\":150.625,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"silver_news.ticker\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_news\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ticker\"},\"Name\":\"silver_news.ticker\",\"NativeReferenceName\":\"Ticker\"}]},\"columnProperties\":{\"silver_news.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 150.63,
+          "width": 765.63,
+          "x": 513.75,
+          "y": 48.13,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"2da109bb2f6fdc4e4179\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":318.4749618820299,\"z\":2000,\"width\":504.85147961586665,\"height\":396.2953324445793,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"silver_news.ticker\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Sentiment\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_news\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ticker\"},\"Name\":\"silver_news.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"},\"Name\":\"bronze_mandg_funds.Avg Sentiment\",\"NativeReferenceName\":\"Avg Sentiment\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"}}}]},\"columnProperties\":{\"silver_news.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#0DEF0A'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Schema\":\"extension\",\"Entity\":\"bronze_mandg_funds\"}},\"Property\":\"Avg Sentiment\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#D90000'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]}}}",
+          "filters": "[]",
+          "height": 396.30,
           "width": 504.85,
           "x": 9.81,
-          "y": 228.23,
+          "y": 318.47,
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"75fb4ec46fd77d40bb84\",\"layouts\":[{\"id\":0,\"position\":{\"x\":514.6607700229107,\"y\":0,\"z\":3000,\"width\":765.1246517494352,\"height\":720.0019158770326,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"silver_news.ticker\"},{\"queryRef\":\"silver_news.title\"},{\"queryRef\":\"silver_news.sentiment_label\"},{\"queryRef\":\"silver_news.sentiment_polarity\"},{\"queryRef\":\"silver_news.source\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_news\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ticker\"},\"Name\":\"silver_news.ticker\",\"NativeReferenceName\":\"ticker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"title\"},\"Name\":\"silver_news.title\",\"NativeReferenceName\":\"title\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"sentiment_label\"},\"Name\":\"silver_news.sentiment_label\",\"NativeReferenceName\":\"sentiment_label\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"sentiment_polarity\"},\"Name\":\"silver_news.sentiment_polarity\",\"NativeReferenceName\":\"sentiment_polarity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"source\"},\"Name\":\"silver_news.source\",\"NativeReferenceName\":\"source\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"title\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"75fb4ec46fd77d40bb84\",\"layouts\":[{\"id\":0,\"position\":{\"x\":514.6607700229107,\"y\":207.9569566293337,\"z\":3000,\"width\":765.1246517494352,\"height\":512.044959247699,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"silver_news.ticker\"},{\"queryRef\":\"silver_news.sentiment_label\"},{\"queryRef\":\"silver_news.sentiment_polarity\"},{\"queryRef\":\"silver_news.source\"},{\"queryRef\":\"silver_news.published_at\"},{\"queryRef\":\"silver_news.title\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_news\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ticker\"},\"Name\":\"silver_news.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"title\"},\"Name\":\"silver_news.title\",\"NativeReferenceName\":\"Title\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"sentiment_label\"},\"Name\":\"silver_news.sentiment_label\",\"NativeReferenceName\":\"Sentiment Label\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"sentiment_polarity\"},\"Name\":\"silver_news.sentiment_polarity\",\"NativeReferenceName\":\"Sentiment Polarity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"source\"},\"Name\":\"silver_news.source\",\"NativeReferenceName\":\"Source\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"published_at\"},\"Name\":\"silver_news.published_at\",\"NativeReferenceName\":\"Published At\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"title\"}}}]},\"columnProperties\":{\"silver_news.ticker\":{\"displayName\":\"Ticker\"},\"silver_news.title\":{\"displayName\":\"Title\"},\"silver_news.sentiment_label\":{\"displayName\":\"Sentiment Label\"},\"silver_news.sentiment_polarity\":{\"displayName\":\"Sentiment Polarity\"},\"silver_news.source\":{\"displayName\":\"Source\"},\"silver_news.published_at\":{\"displayName\":\"Published At\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"441.87386842981135D\"}}}},\"selector\":{\"metadata\":\"silver_news.title\"}}]}}}",
           "filters": "[]",
-          "height": 720.00,
+          "height": 512.04,
           "width": 765.12,
           "x": 514.66,
-          "y": 0.00,
+          "y": 207.96,
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"7c3f39164963af871a39\",\"layouts\":[{\"id\":0,\"position\":{\"x\":248.5020236451157,\"y\":0,\"z\":1000,\"width\":231.4992536062394,\"height\":176.56722732679276,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Positive News %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Positive News %\"},\"Name\":\"bronze_mandg_funds.Positive News %\",\"NativeReferenceName\":\"Positive News %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Positive News %\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"7c3f39164963af871a39\",\"layouts\":[{\"id\":0,\"position\":{\"x\":212.53462548595422,\"y\":48.39249934141727,\"z\":1000,\"width\":228.2294901372247,\"height\":109.21009986509033,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Positive News %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Positive News %\"},\"Name\":\"bronze_mandg_funds.Positive News %\",\"NativeReferenceName\":\"Positive News %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Positive News %\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 176.57,
-          "width": 231.50,
-          "x": 248.50,
-          "y": 0.00,
+          "height": 109.21,
+          "width": 228.23,
+          "x": 212.53,
+          "y": 48.39,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"7c582463d4d154bbd907\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":0,\"z\":0,\"width\":221.68996319919535,\"height\":176.56722732679276,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Sentiment\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"},\"Name\":\"bronze_mandg_funds.Avg Sentiment\",\"NativeReferenceName\":\"Avg Sentiment\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"7c582463d4d154bbd907\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":48.39249934141727,\"z\":0,\"width\":212.53462548595422,\"height\":109.21009986509033,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Sentiment\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"},\"Name\":\"bronze_mandg_funds.Avg Sentiment\",\"NativeReferenceName\":\"Market Mood Score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Sentiment\"}}}]},\"columnProperties\":{\"bronze_mandg_funds.Avg Sentiment\":{\"displayName\":\"Market Mood Score\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 176.57,
-          "width": 221.69,
-          "x": 9.81,
-          "y": 0.00,
+          "height": 109.21,
+          "width": 212.53,
+          "x": 0.00,
+          "y": 48.39,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ef13cc9633195a7fa101\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5000,\"width\":1279.785750153434,\"height\":48.318441587425575,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Sentiment Analisys\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Georgia\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 48.32,
+          "width": 1279.79,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
         }
       ],
       "width": 1280.00
@@ -123,66 +182,75 @@
       "name": "6ded0e84102185a74947",
       "visualContainers": [
         {
-          "config": "{\"name\":\"0edd638fee41c6f5e7b1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":186.37651773383678,\"y\":0,\"z\":1000,\"width\":198.80161891609256,\"height\":166.75793691974872,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Daily Return %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"},\"Name\":\"bronze_mandg_funds.Avg Daily Return %\",\"NativeReferenceName\":\"Avg Daily Return %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"0edd638fee41c6f5e7b1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":186.09129530292282,\"y\":58.11272028757941,\"z\":1000,\"width\":199.15033356979458,\"height\":166.50273790261514,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Daily Return %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"},\"Name\":\"bronze_mandg_funds.Avg Daily Return %\",\"NativeReferenceName\":\"Avg Daily Return %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 166.76,
-          "width": 198.80,
-          "x": 186.38,
-          "y": 0.00,
+          "height": 166.50,
+          "width": 199.15,
+          "x": 186.09,
+          "y": 58.11,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"13d87f27c308c718d5ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":186.37651773383678,\"height\":166.75793691974872,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Close Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"},\"Name\":\"bronze_mandg_funds.Avg Close Price\",\"NativeReferenceName\":\"Avg Close Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"13d87f27c308c718d5ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":58.11272028757941,\"z\":0,\"width\":186.09129530292282,\"height\":166.50273790261514,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Close Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"},\"Name\":\"bronze_mandg_funds.Avg Close Price\",\"NativeReferenceName\":\"Avg Close Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 166.76,
-          "width": 186.38,
+          "height": 166.50,
+          "width": 186.09,
           "x": 0.00,
-          "y": 0.00,
+          "y": 58.11,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"3b4edc2d049abd8fa150\",\"layouts\":[{\"id\":0,\"position\":{\"x\":701.0372877567474,\"y\":0,\"z\":4000,\"width\":578.7481340155985,\"height\":151.06307226847824,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_daily_prices.ticker\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"Ticker\"}]},\"columnProperties\":{\"gold_daily_prices.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "config": "{\"name\":\"3884d057090129f177c1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":7000,\"width\":1279.785750153434,\"height\":48.318441587425575,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Market Intelligence Platform \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Georgia\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 151.06,
-          "width": 578.75,
-          "x": 701.04,
+          "height": 48.32,
+          "width": 1279.79,
+          "x": 0.00,
           "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"3b4edc2d049abd8fa150\",\"layouts\":[{\"id\":0,\"position\":{\"x\":701.2703549310144,\"y\":79.00718151457424,\"z\":4000,\"width\":578.5153952224197,\"height\":150.83189198236903,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_daily_prices.ticker\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"Ticker\"}]},\"columnProperties\":{\"gold_daily_prices.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 150.83,
+          "width": 578.52,
+          "x": 701.27,
+          "y": 79.01,
           "z": 4000.00
         },
         {
-          "config": "{\"name\":\"74715982786a824e7065\",\"layouts\":[{\"id\":0,\"position\":{\"x\":543.4346885502399,\"y\":0,\"z\":3000,\"width\":157.6025992065076,\"height\":166.75793691974872,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Total Volume\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Volume\"},\"Name\":\"bronze_mandg_funds.Total Volume\",\"NativeReferenceName\":\"Total Volume\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Volume\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"74715982786a824e7065\",\"layouts\":[{\"id\":0,\"position\":{\"x\":543.2559919018659,\"y\":58.11272028757941,\"z\":3000,\"width\":158.01436302914848,\"height\":166.50273790261514,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Total Volume\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Volume\"},\"Name\":\"bronze_mandg_funds.Total Volume\",\"NativeReferenceName\":\"Total Volume\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Volume\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 166.76,
-          "width": 157.60,
-          "x": 543.43,
-          "y": 0.00,
+          "height": 166.50,
+          "width": 158.01,
+          "x": 543.26,
+          "y": 58.11,
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"a9dc3aaa30c155316bde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":166.50273790261514,\"z\":5000,\"width\":726.7354795514144,\"height\":553.7032225153633,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_daily_prices.trade_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Close Price\"}],\"Series\":[{\"queryRef\":\"gold_daily_prices.ticker\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"trade_date\"},\"Name\":\"gold_daily_prices.trade_date\",\"NativeReferenceName\":\"Trade Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"},\"Name\":\"bronze_mandg_funds.Avg Close Price\",\"NativeReferenceName\":\"Avg Close Price\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"ticker\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"trade_date\"}}}]},\"columnProperties\":{\"gold_daily_prices.trade_date\":{\"displayName\":\"Trade Date\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Close Price by Ticker and Trade Date'\"}}}}}]}}}",
+          "config": "{\"name\":\"a9dc3aaa30c155316bde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":236.36859263037917,\"z\":5000,\"width\":726.7354795514144,\"height\":483.8373677875993,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_daily_prices.trade_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Close Price\"}],\"Series\":[{\"queryRef\":\"gold_daily_prices.ticker\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"trade_date\"},\"Name\":\"gold_daily_prices.trade_date\",\"NativeReferenceName\":\"Trade Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Close Price\"},\"Name\":\"bronze_mandg_funds.Avg Close Price\",\"NativeReferenceName\":\"Avg Close Price\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"ticker\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"trade_date\"}}}]},\"columnProperties\":{\"gold_daily_prices.trade_date\":{\"displayName\":\"Trade Date\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Close Price by Ticker and Trade Date'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 553.70,
+          "height": 483.84,
           "width": 726.74,
           "x": 0.00,
-          "y": 166.50,
+          "y": 236.37,
           "z": 5000.00
         },
         {
-          "config": "{\"name\":\"c0d4204e4d940e868405\",\"layouts\":[{\"id\":0,\"position\":{\"x\":385.17813664992934,\"y\":0,\"z\":2000,\"width\":158.25655190031054,\"height\":166.75793691974872,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Volatility\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Volatility\"},\"Name\":\"bronze_mandg_funds.Avg Volatility\",\"NativeReferenceName\":\"Avg Volatility\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Volatility\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"c0d4204e4d940e868405\",\"layouts\":[{\"id\":0,\"position\":{\"x\":391.1181960928097,\"y\":58.11272028757941,\"z\":2000,\"width\":158.01436302914848,\"height\":166.50273790261514,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"bronze_mandg_funds.Avg Volatility\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Volatility\"},\"Name\":\"bronze_mandg_funds.Avg Volatility\",\"NativeReferenceName\":\"Avg Volatility\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Volatility\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 166.76,
-          "width": 158.26,
-          "x": 385.18,
-          "y": 0.00,
+          "height": 166.50,
+          "width": 158.01,
+          "x": 391.12,
+          "y": 58.11,
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"e8f4ba295859a0b84c4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":727,\"y\":167,\"width\":553,\"height\":553,\"z\":6000,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_daily_prices.ticker\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Daily Return %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"},\"Name\":\"bronze_mandg_funds.Avg Daily Return %\",\"NativeReferenceName\":\"Avg Daily Return %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"}}}]},\"columnProperties\":{\"gold_daily_prices.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"e8f4ba295859a0b84c4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":726.7354795514144,\"y\":236.36859263037917,\"z\":6000,\"width\":553.0502706020197,\"height\":483.8373677875993,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_daily_prices.ticker\",\"active\":true}],\"Y\":[{\"queryRef\":\"bronze_mandg_funds.Avg Daily Return %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_daily_prices\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"ticker\"},\"Name\":\"gold_daily_prices.ticker\",\"NativeReferenceName\":\"Ticker\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"},\"Name\":\"bronze_mandg_funds.Avg Daily Return %\",\"NativeReferenceName\":\"Avg Daily Return %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Daily Return %\"}}}]},\"columnProperties\":{\"gold_daily_prices.ticker\":{\"displayName\":\"Ticker\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 553.00,
-          "width": 553.00,
-          "x": 727.00,
-          "y": 167.00,
+          "height": 483.84,
+          "width": 553.05,
+          "x": 726.74,
+          "y": 236.37,
           "z": 6000.00
         }
       ],
@@ -198,43 +266,62 @@
       "ordinal": 2,
       "visualContainers": [
         {
-          "config": "{\"name\":\"4290e51a4e740265f791\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(bronze_mandg_funds.nav_price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":1},\"Name\":\"Sum(bronze_mandg_funds.nav_price)\",\"NativeReferenceName\":\"Average of NAV Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(bronze_mandg_funds.nav_price)\":{\"displayName\":\"Average of NAV Price\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"06b3803d2fbe3cc6c55d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":433.75,\"y\":48.125,\"z\":5000,\"width\":837.5,\"height\":241.875,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(bronze_mandg_funds.nav_price)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(bronze_mandg_funds.price_change_pct)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"},\"Name\":\"Sum(bronze_mandg_funds.nav_price)\",\"NativeReferenceName\":\"NAV Price\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price_change_pct\"},\"Name\":\"Sum(bronze_mandg_funds.price_change_pct)\",\"NativeReferenceName\":\"Price Change %\"}]},\"columnProperties\":{\"Sum(bronze_mandg_funds.nav_price)\":{\"displayName\":\"NAV Price\"},\"Sum(bronze_mandg_funds.price_change_pct)\":{\"displayName\":\"Price Change %\"}},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 280.00,
-          "width": 280.00,
-          "x": 10.00,
-          "y": 0.00,
+          "height": 241.88,
+          "width": 837.50,
+          "x": 433.75,
+          "y": 48.13,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"4290e51a4e740265f791\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":48.39249934141727,\"z\":0,\"width\":210.57276740454543,\"height\":98.74685676424335,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(bronze_mandg_funds.nav_price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":1},\"Name\":\"Sum(bronze_mandg_funds.nav_price)\",\"NativeReferenceName\":\"Average of NAV Price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(bronze_mandg_funds.nav_price)\":{\"displayName\":\"Average of NAV Price\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 98.75,
+          "width": 210.57,
+          "x": 0.00,
+          "y": 48.39,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"7af0eac797c1ca3fbeaa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":278.5838475600508,\"y\":0,\"z\":1000,\"width\":279.89175294765664,\"height\":280.54570564145956,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(bronze_mandg_funds.price_change_pct)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price_change_pct\"}},\"Function\":1},\"Name\":\"Sum(bronze_mandg_funds.price_change_pct)\",\"NativeReferenceName\":\"Average price change\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price_change_pct\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(bronze_mandg_funds.price_change_pct)\":{\"displayName\":\"Average price change\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"5aeda438b13ebb3a5a1c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1279.785750153434,\"height\":48.318441587425575,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"M&G Funds\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Georgia\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
-          "height": 280.55,
-          "width": 279.89,
-          "x": 278.58,
+          "height": 48.32,
+          "width": 1279.79,
+          "x": 0.00,
           "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"7af0eac797c1ca3fbeaa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":210.57276740454543,\"y\":48.39249934141727,\"z\":1000,\"width\":224.3057739744071,\"height\":98.74685676424335,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(bronze_mandg_funds.price_change_pct)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price_change_pct\"}},\"Function\":1},\"Name\":\"Sum(bronze_mandg_funds.price_change_pct)\",\"NativeReferenceName\":\"Average price change\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price_change_pct\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(bronze_mandg_funds.price_change_pct)\":{\"displayName\":\"Average price change\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 98.75,
+          "width": 224.31,
+          "x": 210.57,
+          "y": 48.39,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"abbf812c8025198e861a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.809290407044042,\"y\":289.7010433547007,\"z\":2000,\"width\":1269.9761313653019,\"height\":430.30087252233193,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"bronze_mandg_funds.fund_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(bronze_mandg_funds.nav_price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"fund_name\"},\"Name\":\"bronze_mandg_funds.fund_name\",\"NativeReferenceName\":\"Fund Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":4},\"Name\":\"Sum(bronze_mandg_funds.nav_price)\",\"NativeReferenceName\":\"Max of nav_price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":4}}}]},\"columnProperties\":{\"bronze_mandg_funds.fund_name\":{\"displayName\":\"Fund Name\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'NAV Price'\"}}}}}]}}}",
+          "config": "{\"name\":\"abbf812c8025198e861a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.50138501943817,\"y\":289.7010433547007,\"z\":2000,\"width\":1262.7826517334697,\"height\":430.30087252233193,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"bronze_mandg_funds.fund_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(bronze_mandg_funds.nav_price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"fund_name\"},\"Name\":\"bronze_mandg_funds.fund_name\",\"NativeReferenceName\":\"Fund Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":4},\"Name\":\"Sum(bronze_mandg_funds.nav_price)\",\"NativeReferenceName\":\"Max of nav_price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"nav_price\"}},\"Function\":4}}}]},\"columnProperties\":{\"bronze_mandg_funds.fund_name\":{\"displayName\":\"Fund Name\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'NAV Price'\"}}}}}]}}}",
           "filters": "[]",
           "height": 430.30,
-          "width": 1269.98,
-          "x": 9.81,
+          "width": 1262.78,
+          "x": 8.50,
           "y": 289.70,
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"f8b02de9b3637dbb05b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":999.8936688246893,\"y\":0,\"z\":3000,\"width\":279.89175294765664,\"height\":281.19965833526254,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"bronze_mandg_funds.asset_class\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"asset_class\"},\"Name\":\"bronze_mandg_funds.asset_class\",\"NativeReferenceName\":\"Asset Class\"}]},\"columnProperties\":{\"bronze_mandg_funds.asset_class\":{\"displayName\":\"Asset Class\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "config": "{\"name\":\"f8b02de9b3637dbb05b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":137.5,\"z\":3000,\"width\":433.75,\"height\":152.5,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"bronze_mandg_funds.asset_class\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"bronze_mandg_funds\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"asset_class\"},\"Name\":\"bronze_mandg_funds.asset_class\",\"NativeReferenceName\":\"Asset Class\"}]},\"columnProperties\":{\"bronze_mandg_funds.asset_class\":{\"displayName\":\"Asset Class\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 281.20,
-          "width": 279.89,
-          "x": 999.89,
-          "y": 0.00,
+          "height": 152.50,
+          "width": 433.75,
+          "x": 0.00,
+          "y": 137.50,
           "z": 3000.00
         }
       ],
       "width": 1280.00
     }
-  ]
+  ],
+  "theme": "Innovate"
 }
