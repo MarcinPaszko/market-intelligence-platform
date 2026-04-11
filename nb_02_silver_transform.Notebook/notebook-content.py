@@ -105,7 +105,6 @@ print("✓ silver_prices saved to Lakehouse")
 
 from pyspark.sql import functions as F
 
-# Gold 1 – daily prices (czyste dane dla Power BI)
 gold_daily = df_silver.select(
     "ticker",
     "trade_date",
@@ -138,7 +137,7 @@ print(f"✓ gold_daily_prices: {gold_daily.count()} rows")
 
 # CELL ********************
 
-# Gold 2 – miesięczne agregaty
+
 gold_monthly = df_silver \
     .withColumn("year", F.year("trade_date")) \
     .withColumn("month", F.month("trade_date")) \
@@ -173,7 +172,7 @@ print(f"✓ gold_monthly_summary: {gold_monthly.count()} rows")
 
 # CELL ********************
 
-# Gold 3 – ranking spółek (Sharpe Ratio + overall stats)
+
 gold_stats = df_silver \
     .groupBy("ticker") \
     .agg(

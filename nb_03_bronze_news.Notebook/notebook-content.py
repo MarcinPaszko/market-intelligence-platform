@@ -30,9 +30,13 @@ import requests
 import pandas as pd
 from datetime import datetime, timedelta
 
-API_KEY = "12e51dd1b0f840119d7b2b29bf4375af"
+try:
+    API_KEY = notebookutils.runtime.context.get("API_KEY", "")
+    if not API_KEY:
+        API_KEY = "xxxxx"  
+except:
+    API_KEY = "xxxxx" 
 
-# Spółki które monitorujemy
 TICKERS = {
     "AAPL": "Apple",
     "MSFT": "Microsoft", 
@@ -46,7 +50,7 @@ TICKERS = {
     "GS": "Goldman Sachs"
 }
 
-# NewsAPI – ostatnie 30 dni (limit darmowego tier)
+
 end_date = datetime.today().strftime('%Y-%m-%dT%H:%M:%S')
 start_date = (datetime.today() - timedelta(days=30)).strftime('%Y-%m-%dT%H:%M:%S')
 

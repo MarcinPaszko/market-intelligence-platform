@@ -82,28 +82,7 @@ display(df_prices)
 
 # CELL ********************
 
-
 spark_df = spark.createDataFrame(df_prices)
-
-spark_df.write \
-    .format("delta") \
-    .mode("overwrite") \
-    .option("overwriteSchema", "true") \
-    .save("Files/bronze/prices/")
-
-print(f"✓ Bronze prices saved successfully")
-print(f"✓ Rows written: {spark_df.count()}")
-print(f"✓ Schema:")
-spark_df.printSchema()
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
 
 spark_df.write \
     .format("delta") \
@@ -111,7 +90,8 @@ spark_df.write \
     .option("overwriteSchema", "true") \
     .saveAsTable("bronze_prices")
 
-print("✓ Table bronze_prices created in Lakehouse")
+print(f"✓ bronze_prices saved: {spark_df.count()} rows")
+spark_df.printSchema()
 
 # METADATA ********************
 
