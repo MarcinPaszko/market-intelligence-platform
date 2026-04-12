@@ -102,6 +102,23 @@ spark_df.printSchema()
 
 # CELL ********************
 
+dim_ticker = spark.createDataFrame([
+    ("AAPL", "Apple", "Technology", "NASDAQ", "USA"),
+    ("MSFT", "Microsoft", "Technology", "NASDAQ", "USA"),
+    ("GOOGL", "Alphabet", "Technology", "NASDAQ", "USA"),
+    ("NVDA", "NVIDIA", "Semiconductors", "NASDAQ", "USA"),
+    ("TSLA", "Tesla", "Automotive/EV", "NASDAQ", "USA"),
+    ("META", "Meta", "Technology", "NASDAQ", "USA"),
+    ("AMZN", "Amazon", "E-commerce/Cloud", "NASDAQ", "USA"),
+    ("JPM", "JPMorgan Chase", "Banking", "NYSE", "USA"),
+    ("BAC", "Bank of America", "Banking", "NYSE", "USA"),
+    ("GS", "Goldman Sachs", "Investment Banking", "NYSE", "USA"),
+    ("SPY", "S&P 500 ETF", "ETF", "NYSE", "USA"),
+], ["ticker", "company_name", "sector", "exchange", "country"])
+
+dim_ticker.write.format("delta") \
+    .mode("overwrite") \
+    .saveAsTable("dim_ticker")
 
 # METADATA ********************
 

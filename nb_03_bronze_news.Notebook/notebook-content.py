@@ -24,18 +24,27 @@
 # META   }
 # META }
 
+# PARAMETERS CELL ********************
+
+API_KEY = "default_value" 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
+
+
 
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
 
-try:
-    API_KEY = notebookutils.runtime.context.get("API_KEY", "")
-    if not API_KEY:
-        API_KEY = "xxxxx"  
-except:
-    API_KEY = "xxxxx" 
+
+
 
 TICKERS = {
     "AAPL": "Apple",
